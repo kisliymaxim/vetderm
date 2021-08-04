@@ -1,0 +1,726 @@
+@import ../config
+
+.main-page
+  .banner
+    .wrapper
+      .text-part
+        padding-top: 54px
+
+  .content
+    padding: 185px 0 198px
+
+    .wrapper
+      display: flex
+
+      .meta-info
+        min-height: 64px
+        padding-left: 80px
+        margin-bottom: 23px
+        background-repeat: no-repeat
+
+        .title
+          padding: 17px 0 9px
+
+        .button-inverse
+          margin: 8px 0 0
+
+        &.hand-logo
+          background-image: url("../../dist/images/dist/icons/hand.svg")
+
+        &.eye-logo
+          background-image: url("../../dist/images/dist/icons/eye.svg")
+
+        &.faq-logo
+          background-image: url("../../dist/images/dist/icons/help.svg")
+
+        &.book-logo
+          background-image: url("../../dist/images/dist/icons/book.svg")
+
+      .left
+        width: 50%
+
+        .slider-wrapper
+          height: 320px
+          width: 100%
+          max-width: 540px
+          position: relative
+
+          .slider
+            width: 100%
+            height: 100%
+
+          .slider-item
+            width: 100%
+            height: 100%
+
+            img, .overlay
+              position: absolute
+              width: 100%
+              height: 100%
+
+            img
+              object-fit: cover
+              z-index: -2
+
+            .overlay
+              background: linear-gradient(135.86deg, #333333 22.19%, rgba(51, 51, 51, 0) 106.88%)
+              z-index: -1
+
+            .title
+              color: $white
+
+            .description
+              color: $white
+
+          .slider-content
+            width: 100%
+            height: 100%
+            padding: 40px
+            display: flex
+            flex-direction: column
+            align-items: baseline
+            justify-content: center
+
+            .description
+              padding: 15px 0
+
+            .button
+              width: 100%
+              max-width: 273px
+              text-align: center
+              background-position: 70% calc(90% - 12px)
+
+          .slider-control
+            position: absolute
+            top: calc(50% - 22.5px)
+            z-index: 3
+            height: 45px
+            width: 45px
+            border-radius: 50%
+            background-color: $white
+            box-shadow: 0 4px 12px rgba(35, 68, 60, 0.15)
+            cursor: pointer
+
+            &.prev, &.next
+              &:after
+                content: ''
+                position: absolute
+                top: calc(50% - 5.25px)
+                left: calc(50% - 3px)
+                width: 6px
+                height: 10.5px
+                background-image: url("../../dist/images/dist/icons/arrow-right-green.svg")
+
+            &.prev
+              left: - 22.5px
+              transform: rotate(180deg)
+
+            &.next
+              right: - 22.5px
+
+      .right
+        width: 50%
+        padding: 0 10px
+
+    .promo-image
+      position: absolute
+      bottom: -55px
+      left: 24%
+      z-index: 1
+
+
+.about-page
+  .page-title
+    padding-top: 50px
+
+  .content
+    padding: 156px 0 110px
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      display: block
+      width: 100%
+      height: 80px
+      background-image: url(../../dist/images/dist/about-page-bottom-content.svg)
+      background-position: bottom
+      background-color: #fff
+
+    .hero-section
+      img
+        width: 100%
+
+    .text-section
+      margin: 44px auto
+      width: 100%
+      max-width: 780px
+
+      p
+        margin: 15px 0 24px
+
+        &:last-of-type
+          margin-bottom: 30px
+
+      h3
+        font-size: 21px
+        margin-bottom: 13px
+
+      .cv-button
+        margin: 4px 0 0
+        padding-left: 25px
+        padding-right: 50px
+
+  .statistics
+    display: flex
+    justify-content: space-between
+    min-height: 310px
+    padding-top: 60px
+
+    .item
+      display: flex
+      flex-direction: column
+      padding-right: 25px
+      padding-bottom: 25px
+
+      &:last-of-type
+        padding-right: 0
+
+      .number
+        font-size: 60px
+        line-height: 50px
+        font-weight: 700
+        color: $primary-1
+
+      .info
+        font-size: $fontsize
+        color: $black-3
+        font-weight: 700
+        text-transform: uppercase
+        padding-top: 20px
+        max-width: 225px
+
+
+.events-page
+  .banner
+    .text-part
+      width: 55%
+
+    .image-part
+      width: 38%
+
+      img
+        margin: 15px auto 0
+
+  .content
+    margin-top: -70px
+    padding-top: 70px
+
+    .wrapper
+      padding-bottom: 75px
+
+      .events-wrapper
+        padding: 60px 0 38px
+        position: relative
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+
+        .event-item
+          height: 320px
+          width: 100%
+          border-radius: 40%
+          position: relative
+
+          img, .overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            border-radius: 5px
+
+          img
+            object-fit: cover
+            z-index: 1
+
+          .overlay
+            background: linear-gradient(135.86deg, #333333 22.19%, rgba(51, 51, 51, 0) 106.88%)
+            z-index: 2
+
+          .title
+            color: $white
+
+          .description
+            color: $white
+
+        .event-content
+          width: 100%
+          height: 100%
+          padding: 40px
+          display: flex
+          flex-direction: column
+          align-items: baseline
+          justify-content: center
+          z-index: 3
+          position: relative
+
+          .description
+            padding: 15px 0
+
+          .button
+            width: 100%
+            max-width: 273px
+            text-align: center
+            background-position: 70% calc(90% - 12px)
+
+
+.articles-page
+  .banner
+    .text-part
+      width: 55%
+
+    .image-part
+      width: 30%
+
+  .content
+    margin-top: -85px
+    padding-top: 85px
+    background-image: url("../../dist/images/dist/articles-page-content.png")
+    background-position: 100% 0
+    background-color: $white
+
+    .wrapper
+      padding-bottom: 65px
+
+      .articles-wrapper
+        padding: 56px 0 176px
+        position: relative
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 170px
+
+        .article-item
+          width: 100%
+          border-radius: 5px
+          position: relative
+
+          .overlay
+            &:before
+              content: ''
+              position: absolute
+              top: calc(50% - 30px)
+              left: calc(50% - 30px)
+              background-image: url("../../dist/images/dist/icons/external-link.svg")
+              background-color: $primary-1
+              background-repeat: no-repeat
+              background-position: 50%
+              border-radius: 50%
+              width: 60px
+              height: 60px
+            display: none
+
+          &:hover
+            .overlay
+              display: block
+              content: ''
+              position: absolute
+              left: 0
+              top: 0
+              width: 100%
+              height: 200px
+              background-color: rgba(0, 0, 0, 0.5)
+              z-index: 1
+              border-radius: 5px
+
+          a
+            text-decoration: none
+
+            img
+              width: 100%
+              height: 200px
+              object-fit: cover
+              border-radius: 5px
+              position: relative
+
+            .title
+              display: block
+              font-size: 18px
+              font-weight: 700
+              color: $black-2
+              text-decoration: none
+              padding: 11px 0
+
+
+.videos-page
+  .banner
+    .text-part
+      width: 55%
+
+    .image-part
+      width: 30%
+
+  .content
+    margin-top: -85px
+    padding-top: 85px
+    background-image: url("../../dist/images/dist/videos-page-content.png")
+    background-position: 100% 0
+    background-color: $white
+
+    .wrapper
+      padding-bottom: 90px
+
+      .videos-wrapper
+        padding: 56px 0 142px
+        position: relative
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 151px
+
+        .video-item
+          width: 100%
+          border-radius: 5px
+          position: relative
+
+          .overlay
+            &:before
+              content: ''
+              position: absolute
+              top: calc(50% - 30px)
+              left: calc(50% - 30px)
+              background-image: url("../../dist/images/dist/icons/youtube-hover-icon.svg")
+              background-color: $primary-1
+              background-repeat: no-repeat
+              background-position: 50%
+              border-radius: 50%
+              width: 60px
+              height: 60px
+            display: none
+
+          &:hover
+            .overlay
+              display: block
+              content: ''
+              position: absolute
+              left: 0
+              top: 0
+              width: 100%
+              height: 200px
+              background-color: rgba(0, 0, 0, 0.5)
+              z-index: 1
+              border-radius: 5px
+
+          a
+            text-decoration: none
+
+            img
+              width: 100%
+              height: 200px
+              object-fit: cover
+              border-radius: 5px
+              position: relative
+
+            .title
+              display: block
+              font-size: 18px
+              font-weight: 700
+              color: $black-2
+              text-decoration: none
+              padding: 11px 0
+
+
+.faq-page
+  .banner
+    .wrapper
+      .text-part
+        width: 55%
+
+      .image-part
+        width: 30%
+
+        img
+          margin: 0 0 -100px
+
+  .content
+    padding: 103px 0 77px
+
+    .text-section
+      text-align: center
+      margin: 44px auto
+      width: 100%
+      max-width: 780px
+
+      p
+        margin: 15px 0 24px
+
+        &:last-of-type
+          margin-bottom: 15px
+
+      h3
+        font-size: 21px
+        margin-bottom: 13px
+
+      .faq-button
+        margin: 4px 0 0
+        padding-left: 25px
+        padding-right: 50px
+
+
+.atlas-page
+  .banner
+    .wrapper
+      .text-part
+        width: 55%
+
+      .image-part
+        width: 30%
+
+        img
+          margin: 0 0 -60px
+
+  .content
+    margin-top: -25px
+    padding: 115px 0 77px
+
+    .letter-list
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        justify-content: space-between
+
+        li
+          a
+            text-decoration: none
+            font-weight: 700
+            font-size: 24px
+            color: $black-2
+
+            &.current, &:hover
+              color: $primary-1
+
+    .letter-blocks
+      margin: 48px auto
+
+      .letter-block
+        background: $white
+        padding: 40px
+        width: 100%
+        height: fit-content
+        max-width: 380px
+        display: inline-block
+        border-radius: 5px
+
+        .letter
+          text-decoration: none
+          font-weight: 700
+          font-size: 32px
+          color: $black-2
+          margin: 8px 0 38px
+
+        .words
+          span
+            font-size: 14px
+            margin-bottom: 15px
+            display: block
+
+    .button.show-more
+      display: block
+      margin: 0 auto
+      padding: 9px 60px 9px 45px
+
+@media (max-width: 840px)
+  .main-page
+    .content
+      padding: 85px 0 80px
+
+      .wrapper
+        flex-direction: column
+
+        .left, .right
+          width: 100%
+
+        .left
+          .slider-wrapper
+            margin: 0 auto 15px
+
+      .promo-image
+        left: unset
+        right: 15px
+        bottom: -50px
+        width: 170px
+
+
+  .about-page
+    .page-title
+      padding-top: 20px
+
+    .content
+      padding: 135px 0 70px
+
+      .hero-section
+        img
+          height: 260px
+          object-fit: cover
+          border-top-left-radius: 110px 100px
+          border-bottom-right-radius: 110px 100px
+
+      .text-section
+        margin-top: 30px
+
+    .statistics
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 120px)
+      grid-column-gap: 40px
+      grid-row-gap: 100px
+      padding-top: 80px
+      padding-bottom: 150px
+
+      .item
+        padding: 0
+
+@media (max-width: 767px)
+  .main-page
+    .banner
+      .wrapper
+        .text-part
+          text-align: center
+          padding-top: 16px
+
+          .sub-title
+            padding: 3px 0 0
+
+          .button
+            margin-top: 20px !important
+
+        .image-part
+          margin: 30px 0 0 !important
+          justify-content: center !important
+
+          img
+            width: 60% !important
+
+    .content
+      padding-top: 106px
+      margin-top: -60px
+
+      .wrapper
+        .left
+          .meta-info
+            margin-bottom: 10px
+
+          .slider-wrapper
+            width: 95%
+
+  .about-page
+    .page-title
+      padding-top: 10px
+
+    .content
+      padding: 105px 0 70px
+
+      .hero-section
+        img
+          height: 210px
+
+      .text-section
+        margin-top: 15px
+
+
+  .events-page
+    .banner
+      .wrapper
+        .image-part
+          img
+            margin: -25px 10px 0
+            width: 38%
+
+    .content
+      padding-top: 60px
+      margin-top: -125px
+
+      .wrapper
+        padding-bottom: 65px
+
+        .events-wrapper
+          padding: 60px 0 20px !important
+          grid-template-columns: repeat(1, 1fr) !important
+
+          .event-item
+            height: auto !important
+
+
+  .articles-page
+    .banner
+      .wrapper
+        .image-part
+          img
+            margin: -25px 0 0
+
+    .content
+      padding-top: 95px
+      margin-top: -155px
+
+      .wrapper
+        padding-bottom: 75px
+
+        .articles-wrapper
+          padding-bottom: 147px !important
+          grid-template-columns: repeat(1, 1fr) !important
+          grid-row-gap: 93px !important
+
+          .article-item
+            height: auto !important
+
+
+  .videos-page
+    .banner
+      .wrapper
+        .image-part
+          img
+            margin: -25px 0 0
+
+    .content
+      padding-top: 60px
+      margin-top: -125px
+
+      .wrapper
+        padding-bottom: 75px
+
+        .videos-wrapper
+          padding-bottom: 147px !important
+          grid-template-columns: repeat(1, 1fr) !important
+          grid-row-gap: 115px !important
+
+          .video-item
+            height: auto !important
+
+
+  .faq-page
+    .content
+      padding: 70px 0
+
+      .text-section
+        margin: 30px auto 0
+
+        h3
+          font-size: 18px
+
+@media (max-width: 440px)
+  .about-page
+    .statistics
+      grid-column-gap: 30px
+      grid-row-gap: 55px
+      padding-bottom: 90px
+
+      .item
+        .number
+          font-size: 42px
+
+        .info
+          padding-top: 10px
+          font-size: 14px
+          line-height: 18px

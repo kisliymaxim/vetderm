@@ -1,0 +1,141 @@
+@import ../config
+
+header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 91px
+
+  .actions
+    display: flex
+    justify-content: space-between
+    width: 85px
+
+    & > *
+      cursor: pointer
+
+
+  .search-wrapper, .menu-wrapper
+    display: none
+    position: absolute
+    z-index: 6
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgb(9 15 13 / 70%)
+
+    &.active
+      display: block
+
+  .search-wrapper
+    .container
+      background: $white
+      height: 91px
+
+      .wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 100%
+
+      input
+        border: none
+        font-size: 16px
+        line-height: 24px
+        width: 100%
+
+      .close
+        cursor: pointer
+
+  .menu-wrapper
+    .close
+      cursor: pointer
+
+    .container
+      background-color: #337545
+      min-height: 420px
+
+      .top-bar
+        height: 91px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+      .columns
+        display: flex
+        align-items: flex-start
+        padding-top: 43px
+
+        .column
+          display: flex
+          justify-content: space-between
+          flex-direction: column
+          flex-basis: 33.333%
+
+          &.column-menu
+            &.sub-menu
+              padding-left: 5px
+
+            ul
+              margin: 0
+              padding: 0
+              list-style-type: none
+
+              li
+                padding-bottom: 28px
+
+                a
+                  font-size: 24px
+                  line-height: 29px
+                  text-decoration: none
+                  color: $white
+                  font-weight: bold
+
+                  &:hover, &:active
+                    color: $primary-1
+
+          &.column-social
+            align-items: center
+
+            a
+              display: flex
+              align-items: center
+              width: fit-content
+              min-width: 200px
+              margin-bottom: 16px
+              margin-left: 25px
+              text-decoration: none
+              color: $white
+
+              &:last-child
+                margin-bottom: 9px
+
+              .title
+                padding-left: 10px
+
+
+@media (max-width: 767px)
+  header
+    .menu-wrapper
+      .columns
+        flex-direction: column
+
+        .column-menu.sub-menu
+          padding-left: 0 !important
+
+        .column-social
+          margin-top: 20px
+
+          a
+            margin-left: 0 !important
+
+@media (max-width: 440px)
+  header
+    height: 65px
+
+    .logo
+      width: 160px
+
+    .actions
+      width: 65px
