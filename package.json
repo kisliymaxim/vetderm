@@ -37,6 +37,8 @@
 	},
 	"dependencies": {
 		"jquery": "^3.6.0",
+		"jquery-bridget": "^3.0.0",
+		"masonry-layout": "^4.2.2",
 		"simple-slider": "^1.0.1"
 	}
 }

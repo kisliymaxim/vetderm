@@ -490,8 +490,10 @@
         list-style: none
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
 
         li
+          margin-right: 10px
           a
             text-decoration: none
             font-weight: 700
@@ -505,31 +507,414 @@
       margin: 48px auto
 
       .letter-block
-        background: $white
-        padding: 40px
+        background: #f6f6f6
         width: 100%
         height: fit-content
         max-width: 380px
-        display: inline-block
+        padding-bottom: 20px
         border-radius: 5px
 
         .letter
+          background: $white
           text-decoration: none
           font-weight: 700
           font-size: 32px
           color: $black-2
-          margin: 8px 0 38px
+          padding: 48px 40px 38px
 
         .words
+          background: $white
+          padding-bottom: 20px
+
           span
+            line-height: 21.5px
             font-size: 14px
-            margin-bottom: 15px
+            padding: 0 40px 15px
             display: block
 
     .button.show-more
       display: block
       margin: 0 auto
       padding: 9px 60px 9px 45px
+
+
+.full-event-page
+  .banner
+    height: 400px
+    margin: 50px 0 0
+    padding: 0
+
+    & > img
+      position: absolute
+      width: 100%
+      height: 400px
+      object-fit: cover
+
+    .wrapper
+      height: 100%
+      flex-direction: column
+      justify-content: center
+
+      .image-part
+        z-index: 1
+        width: 320px
+        height: 150px
+        border-radius: 5px
+        margin: 0
+        padding: 33px
+        background: $white
+
+  .content.section-1
+    margin: 0
+    padding: 23px 0 0
+
+    .wrapper
+      display: flex
+      justify-content: space-between
+
+      .description
+        width: 100%
+        max-width: 680px
+        margin-right: 20px
+
+        .main-text
+          padding: 20px 0 0
+
+          p
+            margin: 0 0 25px
+
+        .details-container
+          margin-top: 28px
+
+          details
+            border-bottom: 1px solid $black-4
+
+            &[open]
+              border: none
+
+              summary
+                &:after
+                  transform: rotate(360deg)
+
+            summary
+              cursor: pointer
+              height: 64px
+              width: 100%
+              position: relative
+              display: flex
+              align-items: center
+              list-style: none
+              font-size: 18px
+              font-weight: 700
+              line-height: 22px
+              padding: 20px 0
+              outline: none
+              color: $black-2
+
+              &::-webkit-details-marker
+                display: none
+
+              &:after
+                content: ""
+                position: absolute
+                width: 24px
+                height: 24px
+                right: 0
+                transform: rotate(180deg)
+                background: url("../../dist/images/dist/icons/arrow-down.svg")
+
+            .detail
+              ul
+                margin: 0
+                padding: 0
+                list-style-type: none
+
+                li
+                  position: relative
+                  padding-left: 30px
+                  margin-bottom: 20px
+
+                  &:before
+                    content: ''
+                    position: absolute
+                    left: 2px
+                    top: 5px
+                    width: 10px
+                    height: 10px
+                    background: $primary-1
+                    border-radius: 50%
+
+      .payment-info
+        width: 100%
+        max-width: 480px
+
+        .form-registration
+          background: #F6F8F6
+          padding: 50px
+          margin: 55px auto 0
+          border-radius: 5px
+
+          .title
+            margin: 5px 0 20px
+            color: $black-2
+
+          .form-control
+            margin-top: 15px
+
+            label
+              font-weight: 700
+              color: $black-2
+
+              span
+                font-weight: 400
+                margin-left: 5px
+
+            .form-input
+              margin-top: 5px
+
+              input, select
+                padding: 13px 10px
+                border-radius: 5px
+                border: 1px solid $black-4
+                line-height: 16px
+                color: $black-3
+                width: 100%
+
+            &.phone
+              .form-input
+                display: flex
+
+                select
+                  -webkit-appearance: none
+                  border-right: none
+                  border-top-right-radius: unset
+                  border-bottom-right-radius: unset
+                  width: fit-content
+                  margin-right: 0
+                  outline: none
+
+                input
+                  -moz-appearance: textfield
+                  border-left: none
+                  border-top-left-radius: unset
+                  border-bottom-left-radius: unset
+
+                  &::-webkit-outer-spin-button,
+                  &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    margin: 0
+
+          .button
+            display: block
+            border: none
+            width: 100%
+            height: 42px
+            margin: 15px auto 0
+            background-position: calc(50% + 50px) calc(90% - 12px)
+
+        .payment-details
+          background: #F6F8F6
+          margin: 23px auto 20px
+          border-radius: 5px
+
+          .title
+            padding: 50px 50px 20px
+            color: $black-2
+
+          .price-section
+            border-bottom: 1px solid $black-4
+            padding-bottom: 30px
+
+            .title
+              font-size: 16px
+              font-weight: 600
+              display: block
+              padding: 0 50px
+              margin: 10px 0
+
+            .price
+              display: flex
+              flex-wrap: wrap
+              margin: 0 auto
+              width: calc(100% - 100px)
+              height: 100px
+              background: $white
+              border-radius: 5px
+
+              .left
+                width: 50%
+                border-right: 1px solid $black-4
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 32px
+                font-weight: 700
+                color: $primary-1
+
+              .right
+                width: 50%
+                display: flex
+                flex-direction: column
+
+                & > *
+                  height: 50%
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  border-bottom: 1px solid $black-4
+
+                  &:last-child
+                    border: none
+
+          .payment-detail-section
+            .title
+              font-size: 16px
+              font-weight: 600
+              display: block
+              padding: 30px 50px 5px
+
+            table
+              background: $white
+              border-radius: 5px
+              margin: 0 auto
+              width: calc(100% - 100px)
+              color: $black-2
+
+              tr
+                height: 35px
+
+                td
+                  padding: 0 15px
+
+            .paypal-button, .apple-pay-button
+              display: flex
+              align-items: center
+              justify-content: center
+              height: 42px
+              width: calc(100% - 100px)
+              border-radius: 5px
+              text-transform: uppercase
+              text-decoration: none
+              font-weight: 600
+
+              img
+                margin-left: 7px
+
+            .paypal-button
+              background: #FFC237
+              color: #333333
+              margin: 20px auto 0
+
+            .apple-pay-button
+              background: #333333
+              color: $white
+              margin: 10px auto 0
+
+  .content.section-2
+    margin-top: -35px
+    padding-top: 150px
+
+    .title-section
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px 0
+      position: relative
+
+      .title
+        color: $black-2
+        font-size: 32px
+
+      .button
+        &.mobile
+          display: none
+        color: $primary-1
+
+      .logo
+        position: absolute
+        top: -225px
+        right: 24%
+        width: 152px
+        height: 180px
+
+    .events-wrapper
+      padding-top: 25px
+
+      .title
+        font-size: 21px
+
+
+.full-event-page-2
+  .content.section-1
+    .wrapper
+      .description
+        width: 100%
+        max-width: 735px
+
+      .payment-info
+        width: 100%
+        max-width: 402px
+
+        .payment-details
+          margin: 55px auto 20px
+          padding-bottom: 50px
+
+          .title
+            text-align: center
+            font-size: 18px
+
+          .price
+            display: flex
+            flex-wrap: wrap
+            margin: 0 auto
+            width: calc(100% - 60px)
+            height: 100px
+            background: $white
+            border-radius: 5px
+
+            .top
+              height: 59px
+              width: 100%
+              border-bottom: 1px solid $black-4
+              display: flex
+              justify-content: center
+              align-items: center
+              font-size: 32px
+              font-weight: 700
+              color: $primary-1
+
+            .bottom
+              height: 40px
+              width: 100%
+              display: flex
+
+              & > *
+                width: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                border-right: 1px solid $black-4
+
+                &:last-child
+                  border: none
+
+          .button
+            display: block
+            margin: 20px auto 0
+            width: calc(100% - 60px)
+            background-image: none
+            text-align: center
+            border-radius: 5px
+
+            &.register-button
+              margin: 15px 0 0 30px
+              width: fit-content
+              min-width: 156px
+              padding: 8px
+              color: $primary-1
+              text-transform: uppercase
+              border: 1px solid #BCCABC
+
 
 @media (max-width: 840px)
   .main-page
@@ -615,6 +1000,7 @@
           .slider-wrapper
             width: 95%
 
+
   .about-page
     .page-title
       padding-top: 10px
@@ -676,6 +1062,11 @@
             height: auto !important
 
 
+  .atlas-page
+    .letter-list
+      ul
+        justify-content: center!important
+
   .videos-page
     .banner
       .wrapper
@@ -708,6 +1099,108 @@
 
         h3
           font-size: 18px
+
+  .full-event-page
+    .banner
+      margin: 20px 0 0
+      height: 250px
+
+      & > img
+        height: 250px
+
+      .wrapper
+        justify-content: flex-end
+
+        .image-part
+          width: 50% !important
+          height: 85px
+          padding: 0
+          margin: 0 0 15px
+
+          img
+            width: 100%
+            margin: 15px 0
+
+    .content.section-1
+      padding: 30px 0 0
+
+      .wrapper
+        flex-direction: column
+        padding-bottom: 30px
+
+        .description
+          margin: 0
+
+          .main-text
+            padding: 15px 0 0
+
+        .payment-info
+          .form-registration
+            padding: 20px
+            margin-top: 30px
+
+            .title
+              margin: 12px 0 14px
+              font-size: 21px
+              text-align: center
+
+          .payment-details
+            margin: 23px auto 20px
+
+            .title
+              padding: 20px 20px 10px
+              font-size: 19px
+              text-align: center
+
+            .price-section
+              padding-bottom: 15px
+
+              .title
+                margin: 8px 0
+                padding-left: 20px
+                text-align: left
+
+              .price
+                width: calc(100% - 40px)
+
+                .left
+                  font-size: 23px
+
+            .payment-detail-section
+              .title
+                font-size: 14px
+                margin: 8px 0 0
+                padding: 10px 20px
+                text-align: left
+
+              table
+                width: calc(100% - 40px)
+
+              .paypal-button, .apple-pay-button
+                width: 100%
+                max-width: 300px
+
+    .content.section-2
+      padding-top: 120px
+      margin-top: -40px
+
+      .title-section
+        .title
+          font-size: 18px
+          width: 80%
+
+        .button
+          &.desktop
+            display: none
+
+          &.mobile
+            display: block
+
+        .logo
+          display: none
+
+      .events-wrapper
+        padding-top: 0 !important
 
 @media (max-width: 440px)
   .about-page
