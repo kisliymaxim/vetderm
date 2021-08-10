@@ -1,32 +1,37 @@
 import $ from 'jquery'
-import {getSlider} from 'simple-slider/dist/simpleslider.min';
+import { tns } from 'tiny-slider/src/tiny-slider';
 import masonry from 'masonry-layout/dist/masonry.pkgd.min';
 
 const jQueryBridget = require('jquery-bridget/jquery-bridget');
 const Masonry = require('masonry-layout');
-$.bridget( 'masonry', Masonry, $ );
+$.bridget('masonry', Masonry, $);
 
 $(document).ready(function () {
 
     const $sliderWrapper = $('.slider-wrapper');
     if ($sliderWrapper.length > 0) {
-        const slider = getSlider({
-            duration: 1,
-            delay: 5000
+        const slider = tns({
+            container: '.slider-wrapper .slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            autoplayButton: false,
+            nav: false,
+            controls: false
         });
 
         $sliderWrapper.find('.slider-control.prev').click(function (e) {
             e.preventDefault();
             e.stopPropagation();
 
-            slider.prev();
+            slider.goTo('prev');
         });
 
         $sliderWrapper.find('.slider-control.next').click(function (e) {
             e.preventDefault();
             e.stopPropagation();
 
-            slider.next();
+            slider.goTo('next');
         });
     }
 
@@ -68,4 +73,5 @@ function initMasonry(selector, itemSelector) {
     selector.masonry({
         itemSelector,
         gutter: 20
-    });}
+    });
+}
