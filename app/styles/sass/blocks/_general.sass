@@ -77,6 +77,10 @@ main
   &.button-primary
     background-color: $primary-1
     color: $white
+    &:hover
+      background-color: $primary-2
+    &:active
+      background-color: $primary-2
 
 
 .button-inverse
@@ -94,6 +98,10 @@ main
   &.button-primary
     background-color: transparent
     color: $primary-1
+    &:hover
+      color: $primary-2
+    &:active
+      color: $primary-3
 
 
 .content.with-wave
@@ -140,6 +148,12 @@ main
         &.current
           color: #666
 
+        &:hover
+          color: $primary-2
+
+        &:active
+          color: $primary-3
+
 
 .pagination
   padding: 10px 0
@@ -167,6 +181,9 @@ main
         color: $white
         font-size: 16px
         font-weight: 700
+        &.current
+          background-color: $primary-2
+
 
 @media (max-width: 767px)
   main
