@@ -67,6 +67,12 @@ $(document).ready(function () {
 
         $('header .menu-wrapper').removeClass('active');
     });
+
+    $('.banner .wrapper .image-part video').mouseover(function(){
+        $(this).get(0).play();
+    }).mouseout(function(){
+        $(this).get(0).pause();
+    })
 });
 
 function initMasonry(selector, itemSelector) {

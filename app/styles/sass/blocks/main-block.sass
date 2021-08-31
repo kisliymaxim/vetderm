@@ -5,6 +5,11 @@
     .wrapper
       .text-part
         padding-top: 54px
+      .image-part
+        video
+          width: calc(100% + 245px)
+          top: -10px
+          left: -135px
 
   .content
     padding: 185px 0 198px
@@ -211,11 +216,16 @@
     .image-part
       width: 38%
 
+      video
+        width: calc(100% + 345px)
+        top: -120px
+        left: -200px
+
       img
         margin: 15px auto 0
 
   .content
-    margin-top: -70px
+    margin-top: 0
     padding-top: 70px
 
     .wrapper
@@ -283,9 +293,13 @@
 
     .image-part
       width: 30%
+      video
+        width: calc(100% + 245px)
+        top: -90px
+        left: -135px
 
   .content
-    margin-top: -85px
+    margin-top: 20px
     padding-top: 85px
     background-image: url("../images/dist/articles-page-content.png")
     background-position: 100% 0
@@ -361,9 +375,13 @@
 
     .image-part
       width: 30%
+      video
+        width: calc(100% + 245px)
+        top: -90px
+        left: -135px
 
   .content
-    margin-top: -85px
+    margin-top: 20px
     padding-top: 85px
     background-image: url("../images/dist/videos-page-content.png")
     background-position: 100% 0
@@ -441,10 +459,16 @@
       .image-part
         width: 30%
 
+        video
+          width: calc(100% + 150px)
+          top: -30px
+          left: -135px
+
         img
           margin: 0 0 -100px
 
   .content
+    margin-top: 50px
     padding: 103px 0 77px
 
     .text-section
@@ -478,11 +502,16 @@
       .image-part
         width: 30%
 
+        video
+          width: calc(100% + 300px)
+          top: -80px
+          left: -200px
+
         img
           margin: 0 0 -60px
 
   .content
-    margin-top: -25px
+    margin-top: 0
     padding: 115px 0 77px
 
     .letter-list
@@ -936,6 +965,12 @@
 
 @media (max-width: 840px)
   .main-page
+    .banner
+      .wrapper
+        .image-part
+          video
+            top: 50px
+
     .content
       padding: 85px 0 80px
 
@@ -955,6 +990,38 @@
         bottom: -50px
         width: 170px
 
+
+  .articles-page
+    .banner
+      .image-part
+        video
+          top: -40px
+
+  .videos-page
+    .banner
+      .image-part
+        video
+          top: -40px
+
+  .events-page
+    .banner
+      .image-part
+        video
+          top: -50px
+
+  .faq-page
+    .banner
+      .wrapper
+        .image-part
+          video
+            top: 20px
+
+  .atlas-page
+    .banner
+      .wrapper
+        .image-part
+          video
+            top: -20px
 
   .about-page
     .page-title
@@ -1003,12 +1070,16 @@
           margin: 30px 0 0 !important
           justify-content: center !important
 
+          video
+            top: 0
+            left: 5%
+
           img
             width: 60% !important
 
     .content
       padding-top: 106px
-      margin-top: -60px
+      margin-top: -35px
 
       .wrapper
         .left
@@ -1038,13 +1109,16 @@
     .banner
       .wrapper
         .image-part
+          video
+            position: static
+            margin: -10px auto 0
           img
             margin: 0 10px
             width: 38%
 
     .content
       padding-top: 60px
-      margin-top: -125px
+      margin-top: -50px
 
       .wrapper
         padding-bottom: 65px
@@ -1061,12 +1135,15 @@
     .banner
       .wrapper
         .image-part
+          video
+            position: static
+            margin: 0 auto
           img
             margin: -25px 0 0
 
     .content
       padding-top: 95px
-      margin-top: -155px
+      margin-top: -25px
 
       .wrapper
         padding-bottom: 75px
@@ -1081,20 +1158,32 @@
 
 
   .atlas-page
+    .banner
+      padding-bottom: 0
+      .wrapper
+        .image-part
+          video
+            position: static
+            margin: 0 auto
+
     .letter-list
       ul
         justify-content: center!important
+
 
   .videos-page
     .banner
       .wrapper
         .image-part
+          video
+            position: static
+            margin: 0 auto
           img
             margin: -25px 0 0
 
     .content
       padding-top: 60px
-      margin-top: -125px
+      margin-top: -25px
 
       .wrapper
         padding-bottom: 75px
@@ -1109,14 +1198,23 @@
 
 
   .faq-page
+    .banner
+      .wrapper
+        .image-part
+          video
+            position: static
+            margin: 10px auto 0
+
     .content
-      padding: 70px 0
+      margin-top: 0
+      padding: 50px 0
 
       .text-section
         margin: 30px auto 0
 
         h3
           font-size: 18px
+
 
   .full-event-page
     .banner

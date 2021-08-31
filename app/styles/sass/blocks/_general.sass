@@ -35,6 +35,7 @@ main
       width: 50%
       display: flex
       flex-direction: column
+      z-index: 1
 
       .title
         padding: 25px 0 0
@@ -55,6 +56,10 @@ main
       align-items: flex-end
       justify-content: flex-end
       margin: 0 13px
+      position: relative
+
+      video
+        position: absolute
 
       img
         z-index: 1
@@ -214,6 +219,10 @@ main
 
         .image-part
           margin: 0
+
+          video
+            position: relative
+            width: 100%!important
 
           img
             margin: 0
