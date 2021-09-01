@@ -68,11 +68,11 @@ $(document).ready(function () {
         $('header .menu-wrapper').removeClass('active');
     });
 
-    $('.banner .wrapper .image-part video').mouseover(function(){
-        $(this).get(0).play();
-    }).mouseout(function(){
-        $(this).get(0).pause();
-    })
+    initVideo();
+});
+
+$(window).on('resize', function () {
+    initVideo();
 });
 
 function initMasonry(selector, itemSelector) {
@@ -80,4 +80,19 @@ function initMasonry(selector, itemSelector) {
         itemSelector,
         gutter: 20
     });
+}
+
+function initVideo() {
+    const $videoElement = $('.banner .wrapper .image-part video');
+    if ($videoElement.length > 0) {
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            $videoElement.get(0).play();
+        } else {
+            $videoElement.mouseover(function () {
+                $(this).get(0).play();
+            }).mouseout(function () {
+                $(this).get(0).pause();
+            });
+        }
+    }
 }
